@@ -25,7 +25,7 @@ PersonalStack.navigationOptions = {
   ),
 };
 
-const PublicStack = createStackNavigator({
+const LinkStack = createStackNavigator({
   Links: LinksScreen,
 });
 
