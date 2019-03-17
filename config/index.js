@@ -8,4 +8,5 @@ export default {
     styleConstants: {
         rowHeight: 50
     }
+    
 };

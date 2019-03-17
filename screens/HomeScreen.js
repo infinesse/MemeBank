@@ -61,7 +61,7 @@ export default class HomeScreen extends React.Component {
         uri: imageUri
       }}
       />
-      <View>
+      <View style={styles.iconBar}>
         
 
       </View>
@@ -100,6 +100,15 @@ const styles = StyleSheet.create({
     height: 40, 
     width: 40,
     borderRadius:20
+  },
+  iconBar: {
+    height: config.styleConstants.rowHeight,
+    width: 100+"%",
+    borderColor: "rgb(102,102,102)",
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    flexDirection: "row"
+
   }
 });
 
