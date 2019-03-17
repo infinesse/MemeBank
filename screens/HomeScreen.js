@@ -23,6 +23,7 @@ export default class HomeScreen extends React.Component {
   constructor(){
     super();
       this.state = {
+        liked: false,
         screenWidth: Dimensions.get("window").width
       };
     
@@ -34,9 +35,18 @@ export default class HomeScreen extends React.Component {
     //   });
 
     // }
+
+likeToggled(){
+  this.setState({
+    liked: !this.state.liked
+  })
+}
+
   render() {
     const imageHeight = Math.floor(this.state.screenWidth * 1.1);
     const imageUri = "https://lh3.googleusercontent.com/pbOssoRAzE9SfloBwvhbequjTksF8wrg1OarGPLSXqnmlj3q9ojGwwHClKZ7Qru7PayUHO5zcnaag3_gB7hYbAyX" + "=s" + imageHeight + "-c";
+
+      const heartIconColor = (this.state.liked) ? 'rgb(252,61, 57)' : null;
 
     return (
       <View style={{ flex: 1, width: 100 + "%", height: 100 + "%" }}>
@@ -53,16 +63,20 @@ export default class HomeScreen extends React.Component {
       <View style={{ alignItems: "center" }}>
         <Text style={{ fontSize: 30 }}>...</Text>
       </View>
-
       </View>
+<TouchableOpacity onPress={() => {
+  this.likeToggled();
+}}>
+      
       <Image
       style={{ width: this.state.screenWidth, height: 400 }}
       source={{
         uri: imageUri
       }}
       />
+      </TouchableOpacity>
       <View style={styles.iconBar}>
-        <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.heartIcon}/>
+        <Image style={[styles.icon, { height: 40, width: 40, tintColor: heartIconColor }]}source={config.images.heartIcon}/>
         <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.messageIcon}/>
         <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.returnIcon}/>
       </View>
@@ -108,12 +122,12 @@ const styles = StyleSheet.create({
     borderColor: "rgb(102,102,102)",
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    flexDirection: "row"
-
+    flexDirection: "row",
+    alignItems: "center"
   },
 
   icon: {
-    paddingHorizontal: 10,
+    marginLeft: 5,
   
   }
 });
