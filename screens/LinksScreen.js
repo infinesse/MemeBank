@@ -16,6 +16,7 @@ export default class LinkScreen extends React.Component {
 
     render() {
         return(
+    
             <ScrollView>
                 {imageMeta.items.map((imageName, imageId) =>
                     <Image
