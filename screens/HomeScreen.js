@@ -7,17 +7,37 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+// import { WebBrowser } from 'expo';
 
-import { MonoText } from '../components/StyledText';
+
+// import { MonoText } from '../components/StyledText';
+
+import config from '../config';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
+  constructor(){
+    super();
+      this.state = {
+        screenWidth: Dimensions.get("window").width
+      };
+    
+  }
+    // componentDidMount(){
+    //   // alert(Dimensions.get("window").width);
+    //   this.setState({
+    //     screenWidth: Dimensions.get("window").width
+    //   });
 
+    // }
   render() {
+    const imageHeight = Math.floor(this.state.screenWidth * 1.1);
+    const imageUri = "https://lh3.googleusercontent.com/pbOssoRAzE9SfloBwvhbequjTksF8wrg1OarGPLSXqnmlj3q9ojGwwHClKZ7Qru7PayUHO5zcnaag3_gB7hYbAyX" + "=s" + imageHeight + "-c";
+
     return (
       <View style={{ flex: 1, width: 100 + "%", height: 100 + "%" }}>
       <View style={styles.tempNav}>
@@ -26,7 +46,7 @@ export default class HomeScreen extends React.Component {
       </View>
       <View style={styles.userBar}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image style={styles.userPic} source={{ uri: "http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg" }}/>
+        <Image style={styles.userPic} source={{ uri: "https://lh3.googleusercontent.com/diiH2srEew6oT63PI_v1OjCFsczx8gjJIwJZde3p7dyajg1K74oY3exNIOGdzvkhL2fGHTPiRVuMNmManwYaaAQ9" }}/>
         <Text style={{ marginLeft: 10 }}>Meowterspace</Text>
 
       </View>
@@ -36,12 +56,15 @@ export default class HomeScreen extends React.Component {
 
       </View>
       <Image
-      style={{width: 100+ "%", height: 100 }}
+      style={{ width: this.state.screenWidth, height: 400 }}
       source={{
-        uri:
-        "http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg"
+        uri: imageUri
       }}
       />
+      <View>
+        
+
+      </View>
       </View>
     )
 
@@ -65,7 +88,7 @@ const styles = StyleSheet.create({
 
   userBar: { 
     width: 100 + "%",
-    height: 50, 
+    height: config.styleConstants.rowHeight, 
     backgroundColor:"rgb(255,255,255)",
     flexDirection: "row",
     paddingHorizontal: 10,
@@ -79,3 +102,7 @@ const styles = StyleSheet.create({
     borderRadius:20
   }
 });
+
+
+
+//1h23mins video 
