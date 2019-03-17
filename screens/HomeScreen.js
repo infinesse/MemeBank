@@ -62,11 +62,12 @@ export default class HomeScreen extends React.Component {
       }}
       />
       <View style={styles.iconBar}>
-        
-
+        <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.heartIcon}/>
+        <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.messageIcon}/>
+        <Image style={[styles.icon, { height: 40, width: 40 }]}source={config.images.returnIcon}/>
       </View>
       </View>
-    )
+    );
 
 
   };
@@ -109,6 +110,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     flexDirection: "row"
 
+  },
+
+  icon: {
+    paddingHorizontal: 10,
+  
   }
 });
 
