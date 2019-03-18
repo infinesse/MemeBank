@@ -39,7 +39,7 @@ likeToggled(){
     const imageSelection = 
         this.props.item % 2 == 0 
         ? "https://lh3.googleusercontent.com/9I5OAAJtwe7hlgLnSjqWCeyIZR5eLFvzaOpG6VpsNyUJuUmK-Zn3e4yHcrfyQXL9dMAOMpgc5VxSmUEEz-8zAZL8h54" 
-        : "https://lh3.googleusercontent.com/pbOssoRAzE9SfloBwvhbequjTksF8wrg1OarGPLSXqnmlj3q9ojGwwHClKZ7Qru7PayUHO5zcnaag3_gB7hYbAyX"
+        : "https://lh3.googleusercontent.com/aGRFIJYViJ6yWzE2P14MzvOmREvqOSNXZt5TylD7C-x07TXpy0UbBHUkqE3PmNGFtjU0Tjgpq_phwxrD0tzrv6ZKVTw"
     const imageUri = 
     imageSelection + "=s" + imageHeight + "-c";
     const heartIconColor = (this.state.liked) ? 'rgb(252,61, 57)' : null;
@@ -48,7 +48,7 @@ likeToggled(){
     <View style={{ flex: 1, width: 100 + "%" }}>
         <View style={styles.userBar}>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Image style={styles.userPic} source={{ uri: "https://lh3.googleusercontent.com/diiH2srEew6oT63PI_v1OjCFsczx8gjJIwJZde3p7dyajg1K74oY3exNIOGdzvkhL2fGHTPiRVuMNmManwYaaAQ9" }}/>
+            <Image style={styles.userPic} source={{ uri: "https://lh3.googleusercontent.com/eEXfHEeFvXSMLrcd7bj1Z4k1FKPuch5KQsFmWR3k_vU5skz5btAW2PJuerM0XSnSD7zC-aHABHt7EyUIdsPH66he9g" }}/>
               <Text style={{ marginLeft: 10 }}>Meowterspace</Text>
 
           </View>
