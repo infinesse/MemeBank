@@ -36,7 +36,12 @@ likeToggled(){
 
   render() {
     const imageHeight = Math.floor(this.state.screenWidth * 1.1);
-    const imageUri = "https://lh3.googleusercontent.com/pbOssoRAzE9SfloBwvhbequjTksF8wrg1OarGPLSXqnmlj3q9ojGwwHClKZ7Qru7PayUHO5zcnaag3_gB7hYbAyX" + "=s" + imageHeight + "-c";
+    const imageSelection = 
+        this.props.item % 2 == 0 
+        ? "https://lh3.googleusercontent.com/9I5OAAJtwe7hlgLnSjqWCeyIZR5eLFvzaOpG6VpsNyUJuUmK-Zn3e4yHcrfyQXL9dMAOMpgc5VxSmUEEz-8zAZL8h54" 
+        : "https://lh3.googleusercontent.com/pbOssoRAzE9SfloBwvhbequjTksF8wrg1OarGPLSXqnmlj3q9ojGwwHClKZ7Qru7PayUHO5zcnaag3_gB7hYbAyX"
+    const imageUri = 
+    imageSelection + "=s" + imageHeight + "-c";
     const heartIconColor = (this.state.liked) ? 'rgb(252,61, 57)' : null;
 
     return (
