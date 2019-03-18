@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, Text, Stylesheet, Image } from 'react-native';
+import { ScrollView, View, Text, Stylesheet, Image, Picker } from 'react-native';
 import imageMeta from '../assets/config/images.json';
 
 
@@ -14,6 +14,13 @@ export default class NewScreen extends React.Component {
         title: 'New',
     };
 
+        constructor(props) {
+            super(props);
+            this.state = {
+                pickerSelection: 'Default value!'
+            }
+        }
+
     render() {
         return(
     
@@ -26,6 +33,7 @@ export default class NewScreen extends React.Component {
                     />
                 )}
             </ScrollView>
+
 
         )
     }

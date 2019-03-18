@@ -8,13 +8,10 @@ import {
   TouchableOpacity,
   View,
   Dimensions,
-  FlatList,
 } from 'react-native';
 import config from '../config';
-import { PostFeed } from '../components/container';
 // import { WebBrowser } from 'expo';
 // import { MonoText } from '../components/StyledText';
-
 
 
 
@@ -30,15 +27,13 @@ export default class HomeScreen extends React.Component {
       <View style={{ flex: 1, width: 100 + "%", height: 100 + "%" }}>
         <View style={styles.tempNav}>
           <Text>Meme Cache</Text>
-           
-          
+
         </View>
-        <PostFeed />
       </View>
     );
 
 
-  }
+  };
 } 
 
 
