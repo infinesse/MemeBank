@@ -9,7 +9,8 @@ class Login extends Component {
                     height: 100 + "%", 
                     width: 100 + "%", 
                     flex: 1,
-                    justifyContent: "center" }}>
+                    justifyContent: "center",
+                    alignItems: "center" }}>
             <Text>LOGIN PAGE</Text></View>
         );
     }

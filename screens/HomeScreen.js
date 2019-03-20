@@ -4,6 +4,7 @@ import {
   View
 } from 'react-native';
 import MainFeed from './MainFeed.js';
+import Login from './Login';
 
 
 class HomeScreen extends Component {
@@ -14,7 +15,7 @@ class HomeScreen extends Component {
 
   render() {
   
-    return <MainFeed />
+    return <Login />
   
 
   };
