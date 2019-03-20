@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 
 class Login extends Component {
     login(){
-        alert('presed');
+        //Navigate to main app
     }
     render(){
         return (

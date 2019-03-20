@@ -5,20 +5,25 @@ import {
 } from 'react-native';
 import MainFeed from './MainFeed.js';
 import Login from './Login';
+import { SwitchNavigator, TabNavigator } from 'react-navigation'; 
 
+const MainStack = SwitchNavigator({
+  main: MainFeed,
+  login: Login 
+});
 
+ 
 class HomeScreen extends Component {
-  static navigationOptions = {
-    header: null,
-  };
-
+  // static navigationOptions = {
+  //   header: null,
+  // };
 
   render() {
-  
-    return <Login />
-  
 
-  };
+    return <MainStack />;
+   
+
+  }
 } 
 
 export default HomeScreen;
