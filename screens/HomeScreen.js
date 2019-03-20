@@ -5,30 +5,57 @@ import {
 } from 'react-native';
 import MainFeed from './MainFeed.js';
 import Login from './Login';
-import { createAppContainer, createSwitchNavigator, createTabNavigator } from 'react-navigation'; 
+import Camera from './Camera';
+import Profile from './Profile';
 
-const MainStack = createSwitchNavigator({
-  login: Login,
-  main: MainFeed
- 
+
+import { SwitchNavigator, TabNavigator } from 'react-navigation';
+
+const Tabs = TabNavigator ({
+  feed: MainFeed, 
+  camera: Camera,
+  profile: Profile
 });
 
-const AppContainer = createAppContainer(MainStack);
- 
+const MainStack = SwitchNavigator({
+  login: Login,
+  main: Tabs
+});
 class HomeScreen extends Component {
-  // static navigationOptions = {
-  //   header: null,
-  // };
+  render(){
+    return <MainStack />;
+  }
+}
+export default HomeScreen;
 
-  render() {
 
-    return <AppContainer />;
+
+// import { createAppContainer, createSwitchNavigator, createTabNavigator } from 'react-navigation'; 
+
+// const Tabs = createTabNavigator ({
+//   feed: MainFeed,
+//   camera: Camera,
+//   profile: Profile
+// }) 
+
+// const MainStack = createSwitchNavigator({
+//   login: Login,
+//   main: Tabs,
+// });
+// const AppContainer2 = createAppContainer(SecondaryStack);
+// const AppContainer = createAppContainer(MainStack);
+ 
+// class HomeScreen extends Component {
+
+//   render() {
+
+//     return <AppContainer />;
    
 
-  }
-} 
+//   }
+// } 
 
-export default HomeScreen;
+// export default HomeScreen;
 
 
 
