@@ -14,7 +14,7 @@ class HomeScreen extends Component {
 
   render() {
   
-    return <MainFeed />;
+    return <MainFeed />
   
 
   };
