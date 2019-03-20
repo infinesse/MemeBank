@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -10,13 +10,12 @@ import {
   Dimensions,
   FlatList,
 } from 'react-native';
-import config from '../config';
-import { PostFeed } from '../components/container/index.js';
+import PostFeed from '../components/container/index.js';
 
 
 
 
-class MainFeed extends React.Component {
+class MainFeed extends Component {
 
   render() {
   

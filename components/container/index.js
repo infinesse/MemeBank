@@ -1,5 +1,3 @@
-import { PostFeed } from './PostFeed.js'
+import PostFeed from './PostFeed.js'
 
-export {
-    PostFeed
-}
+export default { PostFeed };

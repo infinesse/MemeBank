@@ -1,7 +1,3 @@
-import { Post } from './Post.js'
+import Post from './Post.js'
 
-export {
-
-    Post
-
-};
+export default { Post };

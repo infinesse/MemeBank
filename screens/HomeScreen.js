@@ -3,10 +3,10 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import { MainFeed } from './MainFeed.js';
+import MainFeed from './MainFeed.js';
 
 
-class HomeScreen extends React.Component {
+class HomeScreen extends Component {
   static navigationOptions = {
     header: null,
   };
@@ -15,7 +15,7 @@ class HomeScreen extends React.Component {
   render() {
   
     return <MainFeed />;
-
+  
 
   };
 } 

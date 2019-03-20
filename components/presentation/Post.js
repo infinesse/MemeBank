@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -14,7 +14,7 @@ import config from '../../config/index.js';
 
 
 
-class Post extends React.Component {
+class Post extends Component {
   static navigationOptions = {
     header: null,
   };
