@@ -11,16 +11,12 @@ import {
   FlatList,
 } from 'react-native';
 import config from '../config';
-import { PostFeed } from '../components/container';
+import { PostFeed } from '../components/container/index.js';
 
 
 
 
-export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
-
+class MainFeed extends React.Component {
 
   render() {
   
@@ -31,13 +27,13 @@ export default class HomeScreen extends React.Component {
            
           
         </View>
-        <PostFeed />
+        <PostFeed />;
       </View>
     );
-
+}
 
   }
-} 
+
 
 
 const styles = StyleSheet.create({
@@ -53,5 +49,70 @@ const styles = StyleSheet.create({
 
   },
 });
+
+
+
+export default MainFeed;
+
+
+
+
+// import React from 'react';
+// import {
+//   Image,
+//   Platform,
+//   ScrollView,
+//   StyleSheet,
+//   Text,
+//   TouchableOpacity,
+//   View,
+//   Dimensions,
+//   FlatList,
+// } from 'react-native';
+// import config from '../config';
+// import { PostFeed } from '../components/container';
+// // import { WebBrowser } from 'expo';
+// // import { MonoText } from '../components/StyledText';
+
+
+
+
+// export default class HomeScreen extends React.Component {
+//   static navigationOptions = {
+//     header: null,
+//   };
+
+
+//   render() {
+  
+//     return (
+//       <View style={{ flex: 1, width: 100 + "%", height: 100 + "%" }}>
+//         <View style={styles.tempNav}>
+//           <Text>Meme Cache</Text>
+           
+          
+//         </View>
+//         <PostFeed />
+//       </View>
+//     );
+
+
+//   }
+// } 
+
+
+// const styles = StyleSheet.create({
+//   tempNav: {
+//     width: 100 + "%", 
+//     height: 56,
+//     marginTop: 20, 
+//     backgroundColor: "rgb(250,250,250)",
+//     borderBottomColor: "rgb(102,102,102)",
+//     borderBottomWidth: StyleSheet.hairlineWidth,
+//     justifyContent: "center",
+//     alignItems: "center"
+
+//   },
+// });
 
 

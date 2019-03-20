@@ -9,13 +9,12 @@ import {
   View,
   Dimensions,
 } from 'react-native';
-import config from '../../config';
-// import { WebBrowser } from 'expo';
-// import { MonoText } from '../components/StyledText';
+import config from '../../config/index.js';
 
 
 
-export default class Post extends React.Component {
+
+class Post extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -124,3 +123,4 @@ const styles = StyleSheet.create({
 });
 
 
+export default Post;
