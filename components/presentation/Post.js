@@ -15,9 +15,9 @@ import config from '../../config/index.js';
 
 
 class Post extends Component {
-  static navigationOptions = {
-    header: null,
-  };
+  // static navigationOptions = {
+  //   header: null,
+  // };
   constructor(){
     super();
       this.state = {

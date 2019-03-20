@@ -16,9 +16,9 @@ import config from '../config';
 
 
 export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
+  // static navigationOptions = {
+  //   header: null,
+  // };
 
 
   render() {

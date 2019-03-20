@@ -10,9 +10,9 @@ const imageData = [
 ];
 
 export default class LinkScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Public',
-    };
+    // static navigationOptions = {
+    //     title: 'Public',
+    // };
 
     render() {
         return(

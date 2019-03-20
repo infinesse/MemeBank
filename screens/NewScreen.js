@@ -10,9 +10,9 @@ const imageData = [
 ];
 
 export default class NewScreen extends React.Component {
-    static navigationOptions = {
-        title: 'New',
-    };
+    // static navigationOptions = {
+    //     title: 'New',
+    // };
 
         constructor(props) {
             super(props);

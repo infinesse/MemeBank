@@ -5,13 +5,15 @@ import {
 } from 'react-native';
 import MainFeed from './MainFeed.js';
 import Login from './Login';
-import { SwitchNavigator, TabNavigator } from 'react-navigation'; 
+import { createAppContainer, createSwitchNavigator, createTabNavigator } from 'react-navigation'; 
 
-const MainStack = SwitchNavigator({
-  main: MainFeed,
-  login: Login 
+const MainStack = createSwitchNavigator({
+  login: Login,
+  main: MainFeed
+ 
 });
 
+const AppContainer = createAppContainer(MainStack);
  
 class HomeScreen extends Component {
   // static navigationOptions = {
@@ -20,7 +22,7 @@ class HomeScreen extends Component {
 
   render() {
 
-    return <MainStack />;
+    return <AppContainer />;
    
 
   }
